@@ -1,4 +1,3 @@
-let windowTitle;
 function Section() {
   return (
     <section className="content">

@@ -108,3 +108,49 @@ button {
   background-color: #ffffff;
   color: #fc7614;
 }
+.thanks-window {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+.thanks-icon {
+  max-width: 162px;
+  width: 100%;
+  height: 108px;
+  display: block;
+  margin: 0 auto;
+}
+.rate {
+  max-width: 193px;
+  width: 100%;
+  height: 32px;
+  border-radius: 22.5px;
+  background: #262e38;
+  margin: 0 auto;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rate-text {
+  color: #fc7614;
+  max-width: 154px;
+  width: 100%;
+  font-size: 15px;
+}
+.thanks-title {
+  font-size: 28px;
+  color: #fff;
+  line-height: 35px;
+  margin-top: 32px;
+  text-align: center;
+}
+.thanks-text {
+  font-size: 15px;
+  color: #969fad;
+  margin-top: 7px;
+  line-height: 24px;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+}
