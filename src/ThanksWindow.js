@@ -1,10 +1,10 @@
 import ThanksIcon from "./images/Online payment_Two Color(1) 2.png";
-export default function ThanksWindow() {
+export default function ThanksWindow(props) {
   return (
     <div className="thanks-window">
       <img className="thanks-icon" src={ThanksIcon} alt="icon" />
       <div className="rate">
-        <p className="rate-text">You selected out of 5</p>
+        <p className="rate-text">You selected out {props.rate} of 5</p>
       </div>
       <h2 className="thanks-title">Thank You!</h2>
       <p className="thanks-text">

@@ -1,18 +1,31 @@
 import "./App.css";
 import "./reset.css";
-import Header from "./Header";
-import Section from "./Section";
-import Footer from "./Footer";
+import RateWindow from "./RateWindow";
 import Thanks from "./ThanksWindow";
+import { useState } from "react";
 
 function App() {
+  const [clicked, setClicked] = useState(false);
+  const [rate, setRate] = useState(null);
+  function click(element) {
+    setRate(element);
+  }
+  function changeWindow() {
+    if (rate != null) {
+      setClicked(true);
+    } else {
+      alert("Please put your rate!");
+    }
+  }
+
   return (
     <div className="container">
       <div className="window">
-        {/* <Header />
-        <Section />
-        <Footer /> */}
-        <Thanks />
+        {clicked ? (
+          <Thanks rate={rate} />
+        ) : (
+          <RateWindow rate={rate} click={click} change={() => changeWindow()} />
+        )}
       </div>
     </div>
   );

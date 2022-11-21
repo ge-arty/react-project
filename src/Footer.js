@@ -1,14 +1,24 @@
-function Footer() {
+function Footer(props) {
+  const btnArr = [1, 2, 3, 4, 5];
   return (
     <div className="footer">
       <div className="button-box">
-        <button className="button-varies">1</button>
-        <button className="button-varies">2</button>
-        <button className="button-varies">3</button>
-        <button className="button-varies">4</button>
-        <button className="button-varies">5</button>
+        {btnArr.map((element, index) => {
+          return (
+            <button
+              key={index}
+              id={props.rate == element ? "active" : ""}
+              onClick={() => props.click(element)}
+              className="button-varies"
+            >
+              {element}
+            </button>
+          );
+        })}
       </div>
-      <button className="submit">submit</button>
+      <button onClick={props.change} className="submit">
+        submit
+      </button>
     </div>
   );
 }
